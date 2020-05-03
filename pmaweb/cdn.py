@@ -21,8 +21,8 @@
 #
 """CDN integration"""
 from django.conf import settings
-from urllib2 import urlopen
-from urllib import urlencode
+from urllib.request import urlopen
+from urllib.parse import urlencode
 import json
 
 URL = 'https://api.cdn77.com/v2.0/data/purge'

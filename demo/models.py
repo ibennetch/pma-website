@@ -32,12 +32,12 @@ class Demo(models.Model):
     master_version = models.CharField(max_length=100)
 
     def get_absolute_url(self):
-        return u'https://demo.phpmyadmin.net/{0}/'.format(self.name)
+        return 'https://demo.phpmyadmin.net/{0}/'.format(self.name)
 
     def get_login_url(self):
         if '-config' in self.name or '-http' in self.name:
             return None
-        return u'{0}?pma_username=root'.format(self.get_absolute_url())
+        return '{0}?pma_username=root'.format(self.get_absolute_url())
 
     def get_description(self):
         if self.name.startswith('master'):
